@@ -15,17 +15,17 @@ public class Utilities
     public static final int PRIMERA_DIVISION = 358;
     public static final int BUNDESLIGA = 351;
     public static final int PremierLeague= 398;
-    public static String getLeague(int league_num)
+    public static String getLeague(Context context,int league_num)
     {
         switch (league_num)
         {
-            case SERIE_A : return "Seria A";
-            case PREMIER_LEGAUE : return "Premier League";
-            case CHAMPIONS_LEAGUE : return "UEFA Champions League";
-            case PRIMERA_DIVISION : return "Primera Division";
-            case BUNDESLIGA : return "Bundesliga";
-            case PremierLeague : return "Premier League 2015/16";
-            default: return "Not known League Please report";
+            case SERIE_A : return context.getResources().getString(R.string.series_a);
+            case PREMIER_LEGAUE : return context.getResources().getString(R.string.premier_legaue);
+            case CHAMPIONS_LEAGUE : return context.getResources().getString(R.string.champion_league);
+            case PRIMERA_DIVISION : return context.getResources().getString(R.string.primera_division);
+            case BUNDESLIGA : return context.getResources().getString(R.string.bundesliga);
+            case PremierLeague : return context.getResources().getString(R.string.premier_legaue);
+            default: return context.getResources().getString(R.string.not_know);
         }
     }
 

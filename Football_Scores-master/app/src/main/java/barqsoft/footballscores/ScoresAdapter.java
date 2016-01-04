@@ -84,7 +84,7 @@ public class ScoresAdapter extends CursorAdapter
                     cursor.getInt(cursor.getColumnIndex(ScoreContract.ScoreColumn.LEAGUE_COL))
             ));
             TextView league = (TextView) v.findViewById(R.id.league_textview);
-            league.setText(Utilities.getLeague(cursor.getInt(
+            league.setText(Utilities.getLeague(context,cursor.getInt(
                     cursor.getColumnIndex(ScoreContract.ScoreColumn.LEAGUE_COL))));
             Button share_button = (Button) v.findViewById(R.id.share_button);
             share_button.setOnClickListener(new View.OnClickListener() {
